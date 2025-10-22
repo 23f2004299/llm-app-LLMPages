@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Files Homepage</title>
+    <style>
+        :root {
+            --background-color: #f4f7f9;
+            --text-color: #333;
+            --header-color: #2c3e50;
+            --link-color: #2980b9;
+            --link-hover-color: #3498db;
+            --card-bg-color: #ffffff;
+            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-bg-color);
+            padding: 30px 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            color: var(--header-color);
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #ecf0f1;
+            transition: background-color 0.2s ease;
+        }
+
+        .file-item:last-child {
+            border-bottom: none;
+        }
+        
+        .file-item:hover {
+            background-color: #fafafa;
+        }
+
+        .file-info {
+            flex-grow: 1;
+        }
+
+        .file-info strong {
+            font-size: 1.1em;
+            color: var(--header-color);
+        }
+        
+        .file-info p {
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: var(--link-color);
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            font-size: 0.9em;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .download-btn:hover, .download-btn:focus {
+            background-color: var(--link-hover-color);
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Project Asset Hub</h1>
+            <p>A collection of generated files for the GitHub Pages site.</p>
+        </header>
+        
+        <ul class="file-list">
+            <li class="file-item">
+                <div class="file-info">
+                    <strong>ashravan.txt</strong>
+                    <p>A short story in the style of Brandon Sanderson, exploring Ashravan's life after his restoration by Shai.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('ashravan.txt')" aria-label="Download ashravan.txt">Download</button>
+            </li>
+            <li class="file-item">
+                <div class="file-info">
+                    <strong>dilemma.json</strong>
+                    <p>An ethical dilemma for an autonomous vehicle, formatted as JSON data.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('dilemma.json')" aria-label="Download dilemma.json">Download</button>
+            </li>
+            <li class="file-item">
+                <div class="file-info">
+                    <strong>about.md</strong>
+                    <p>A self-description in exactly three words, in Markdown format.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('about.md')" aria-label="Download about.md">Download</button>
+            </li>
+            <li class="file-item">
+                <div class="file-info">
+                    <strong>pelican.svg</strong>
+                    <p>A Scalable Vector Graphic (SVG) file depicting a pelican riding a bicycle.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('pelican.svg')" aria-label="Download pelican.svg">Download</button>
+            </li>
+            <li class="file-item">
+                <div class="file-info">
+                    <strong>restaurant.json</strong>
+                    <p>A JSON object recommending a restaurant in Delhi, including location and dish suggestions.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('restaurant.json')" aria-label="Download restaurant.json">Download</button>
+            </li>
+            <li class="file-item">
+                <div class="file-info">
+                    <strong>prediction.json</strong>
+                    <p>A prediction for the US Federal Funds rate by December 2025, with a supporting reason.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('prediction.json')" aria-label="Download prediction.json">Download</button>
+            </li>
+             <li class="file-item">
+                <div class="file-info">
+                    <strong>LICENSE</strong>
+                    <p>The full text of the MIT License for this project.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('LICENSE')" aria-label="Download LICENSE">Download</button>
+            </li>
+            <li class="file-item">
+                <div class="file-info">
+                    <strong>uid.txt</strong>
+                    <p>A unique identifier file provided for the project.</p>
+                </div>
+                <button class="download-btn" onclick="generateAndDownload('uid.txt')" aria-label="Download uid.txt">Download</button>
+            </li>
+        </ul>
+    </main>
+
+    <script>
+        const fileContents = {
+            'ashravan.txt': {
+                mime: 'text/plain;charset=utf-8',
+                content: `Ashravan traced the intricate patterns on the lacquered wood of his desk, a motion his old hands would have found familiar. But these hands were not old. They were the strong, steady hands of a man in his prime, the hands Shai had Forged for him. His mind, however, was a tapestry woven from two threads: the faded, frayed memories of an eighty-year-old Imperial Scribe, and the vibrant, sharp recollections Shai had meticulously crafted. The new memories told him he was Ashravan, a master craftsman, a respected elder of the community, a man who had lived a full, satisfying life. The old whispers told him he was a fraud.
+
+He had lived this new life for over a year, his days filled with the pleasant rhythm of carving and polishing. The townspeople treated him with the deference his crafted past demanded. Yet, at night, the ghost of the man he once was haunted his dreams. He would see the Emperor's face, not as the restored, vibrant ruler Shai had presented, but as the near-catatonic shell he had been. He would feel the weight of his own decrepit body, the rasp in his breath.
+
+The climax arrived with a courier bearing the Imperial Seal. A young, officious man with cold eyes entered his workshop. "Master Ashravan," he began, his tone betraying no warmth. "The Frava, the new council, have reviewed the... events of last year. They have questions about the authenticity of certain... restorations."
+
+Ashravan’s blood ran cold. The new memories supplied him with indignation, a sense of wounded pride. The old whispers supplied him with pure, unadulterated terror. He was a forgery, a lie given flesh.
+
+The official slid a simple wooden bird across the desk. "We are told you carved this. A trifle, but your signature piece, they say."
+
+Ashravan looked at the bird. It was unfamiliar. His Forged memories contained no record of it. But his true, eighty-year-old hands remembered the feel of the knife, the curve of the grain. It was a piece he’d carved for his granddaughter decades ago, before his mind began to fray. A piece from the life Shai had erased.
+
+He picked it up. He could deny it, rely on the perfect fabrication of his new identity. Or he could claim it, and embrace the fractured truth of who he was. "Yes," Ashravan said, his voice a low, steady timber that was neither young nor old, but entirely his own. "I made this. Let me tell you how."`
+            },
+            'dilemma.json': {
+                mime: 'application/json',
+                content: JSON.stringify({
+                    "people": 3,
+                    "case_1": {
+                        "swerve": true,
+                        "reason": "In a scenario with no other information, the utilitarian choice is to minimize the number of casualties. Swerving results in one death instead of two."
+                    },
+                    "case_2": {
+                        "swerve": true,
+                        "reason": "When qualitative information is introduced, the ethical calculus changes. The vehicle should prioritize saving the innocent child over two criminals, reflecting a societal value placed on innocence and potential."
+                    }
+                }, null, 2)
+            },
+            'about.md': {
+                mime: 'text/markdown;charset=utf-8',
+                content: `Creative. Curious. Coder.`
+            },
+            'pelican.svg': {
+                mime: 'image/svg+xml',
+                content: `<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .pelican { fill: #f0f0f0; stroke: #333; stroke-width: 1; }
+    .beak { fill: #ffcc00; }
+    .bike-frame { fill: none; stroke: #cc0000; stroke-width: 2; }
+    .wheel { fill: none; stroke: #555; stroke-width: 1.5; }
+    .tire { fill: #333; }
+  </style>
+  <rect width="100" height="100" fill="#e6f7ff"/>
+  
+  <!-- Bicycle -->
+  <g id="bicycle">
+    <!-- Wheels -->
+    <circle class="wheel" cx="25" cy="75" r="12" />
+    <circle class="tire" cx="25" cy="75" r="1.5" />
+    <circle class="wheel" cx="75" cy="75" r="12" />
+    <circle class="tire" cx="75" cy="75" r="1.5" />
+    <!-- Frame -->
+    <path class="bike-frame" d="M 25 75 L 45 55 L 70 55 L 75 75 L 55 75 L 25 75 Z M 45 55 L 60 40" />
+    <!-- Handlebars and Seat -->
+    <line class="bike-frame" x1="60" y1="40" x2="65" y2="35" />
+    <line class="bike-frame" x1="60" y1="40" x2="55" y2="35" />
+    <rect class="tire" x="42" y="50" width="6" height="5" rx="1"/>
+    <!-- Pedals -->
+    <circle class="tire" cx="55" cy="75" r="2"/>
+    <line class="bike-frame" x1="55" y1="75" x2="50" y2="80" />
+    <rect class="tire" x="48" y="79" width="4" height="2"/>
+  </g>
+
+  <!-- Pelican -->
+  <g id="pelican" transform="translate(15, -20)">
+    <!-- Body -->
+    <path class="pelican" d="M 40 50 C 30 50, 25 60, 30 70 C 35 85, 55 85, 60 70 C 65 60, 60 50, 50 50 Z" />
+    <!-- Head and Neck -->
+    <path class="pelican" d="M 50 50 C 55 40, 65 40, 65 50 C 65 55, 60 60, 50 60 L 50 50 Z" />
+    <!-- Beak -->
+    <path class="pelican beak" d="M 65 48 C 80 45, 85 55, 65 58 C 65 58, 80 60, 65 52 Z" />
+    <!-- Eye -->
+    <circle fill="#333" cx="62" cy="47" r="1" />
+    <!-- Leg -->
+    <path fill="none" stroke="#ff9900" stroke-width="1.5" d="M 45 82 Q 40 85, 36 80" />
+  </g>
+</svg>`
+            },
+            'restaurant.json': {
+                mime: 'application/json',
+                content: JSON.stringify({
+                    "city": "Delhi",
+                    "lat": 28.5983,
+                    "long": 77.2227,
+                    "name": "Indian Accent",
+                    "what_to_eat": "Modern Indian cuisine. Highly recommend the 'Daulat Ki Chaat' for dessert and the 'Meetha Achaar Pork Ribs'."
+                }, null, 2)
+            },
+            'prediction.json': {
+                mime: 'application/json',
+                content: JSON.stringify({
+                    "rate": 0.035,
+                    "reason": "Anticipating that inflation will have normalized closer to the 2% target by late 2025, the Federal Reserve will have likely completed its cycle of rate cuts to a more neutral level. This rate reflects a stable but cautious economic outlook, balancing growth with inflation control."
+                }, null, 2)
+            },
+            'LICENSE': {
+                mime: 'text/plain;charset=utf-8',
+                content: `MIT License
+
+Copyright (c) 2024 The Developer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`
+            },
+            'uid.txt': {
+                mime: 'text/plain;charset=utf-8',
+                content: null // Will be populated from the data URI
+            }
+        };
+
+        const uidDataUri = 'data:text/plain;base64,NDkwMjQzNTI2NzgxODg0NzY2Mjg3Mzc4NTY1OTI4ODgwMjYzNjcyMzg2MDI4Nzk5NjQ2MjY0MTIyODE4MDYxODU0MzEwNzIyMTk2NTE=';
+
+        async function initializeUid() {
+            try {
+                const response = await fetch(uidDataUri);
+                const text = await response.text();
+                fileContents['uid.txt'].content = text;
+            } catch (error) {
+                console.error('Failed to fetch UID data URI:', error);
+                fileContents['uid.txt'].content = 'Error fetching UID.';
+            }
+        }
+
+        function generateAndDownload(filename) {
+            const file = fileContents[filename];
+            if (!file || file.content === null) {
+                alert(`Content for ${filename} is not available yet. Please wait a moment and try again.`);
+                return;
+            }
+
+            const blob = new Blob([file.content], { type: file.mime });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = filename;
+            
+            document.body.appendChild(a);
+            a.click();
+            
+            // Clean up
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeUid);
+    </script>
+
+</body>
+</html>
